@@ -91,9 +91,23 @@ sudo systemctl restart apache2 / sudo systemctl reload apache2
 sudo mysql -u root -p
 ```
 
-# create database owncloud
+## create database owncloud
 ```yaml
-> create database owncloud
+mysql> create database owncloud
 ```
+
+## Set privileges and user password
+```yaml
+mysql> GRANT ALL ON owncloud.* to 'owncloud'@'localhost' IDENTIFIED BY 'password_anda';
+```
+
+```yaml
+msql> FLUSH PRIVILEGES;
+```
+
+```yaml
+mysql> exit;
+```
+
 
 
