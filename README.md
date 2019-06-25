@@ -39,6 +39,11 @@ sudo apache2ctl -t -D DUMP_VHOSTS | grep localhost / 127.0.0.1
 echo 'deb http://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/owncloud.list
 ```
 
+## Add repository owncloud v9 (ubuntu 16.04)
+```yaml
+echo 'deb https://download.owncloud.org/download/repositories/stable/Ubuntu_16.04/ /' | sudo tee /etc/apt/sources.list.d/owncloud.list
+```
+
 
 ## Refresh repository :
 ```yaml
