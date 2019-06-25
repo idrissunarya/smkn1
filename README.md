@@ -1,16 +1,15 @@
-owncloud :
+## Data Owncloud
 
-Database mysql :
-user : ownclouds
-pass : smkn12019
+## Database mysql
+| __User__ | __Password__ |
+|----------|--------------|
+| owncloud | `smkn12019` |
 
-login owncloud page :
-user : idris
-pass : smkn12019
-
-
-===============================================================
-===============================================================
+## Login page Owncloud 
+| __User__ | __Password__ |
+|----------|--------------|
+| idris | `smkn12019` |
+| guru01 | `rahasia` |
 
 ## Pastikan LAMP sudah terinstall :
 - Linux
