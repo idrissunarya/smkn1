@@ -42,8 +42,16 @@ sudo sysytemctl restart apache2.service
 ## Set module php 5.6
 ``yaml
 sudo update-alternatives --set php /usr/bin/php5.6
+```
+``yaml
 sudo update-alternatives --set phar /usr/bin/phar5.6
+```
+``yaml
 sudo update-alternatives --set phar.phar /usr/bin/phar.phar5.6
+```
+``yaml
 sudo update-alternatives --set phpize /usr/bin/phpize5.6
+```
+``yaml
 sudo update-alternatives --set php-config /usr/bin/php-config5.6
 ```
