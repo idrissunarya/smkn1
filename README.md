@@ -21,8 +21,9 @@
 
 ## Dump Vhost Apache2 :
 ```yaml
-    sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP
+sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP
 ```
+
 ```yaml
 sudo apache2ctl -t -D DUMP_VHOSTS | grep localhost / 127.0.0.1
 ```
@@ -82,6 +83,17 @@ sudo apache2ctl configtest
 ## Reload / restart service apache2 :
 ```yaml
 sudo systemctl restart apache2 / sudo systemctl reload apache2
+```
+
+## Configue Database Mysql 
+
+```yaml
+sudo mysql -u root -p
+```
+
+# create database owncloud
+```yaml
+> create database owncloud
 ```
 
 
