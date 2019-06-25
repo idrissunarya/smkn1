@@ -12,7 +12,7 @@ pass : smkn12019
 ===============================================================
 ===============================================================
 
-Pastikan LAMP sudah terinstall :
+## Pastikan LAMP sudah terinstall :
 - Linux
 - Apache2
 - mysql
@@ -20,27 +20,32 @@ Pastikan LAMP sudah terinstall :
 
 ===============================================================
 
-Dump Vhost Apache2 :
-sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP
+## Dump Vhost Apache2 :
+```yaml
+    sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP
+```
+```yaml
 sudo apache2ctl -t -D DUMP_VHOSTS | grep localhost / 127.0.0.1
+```
 
-output :
+> output :
 *:443                  server_domain_or_IP (/etc/apache2/sites-enabled/server_domain_or_IP-le-ssl.conf:2)
          port 80 namevhost server_domain_or_IP (/etc/apache2/sites-enabled/server_domain_or_IP.conf:1)
 
-===============================================================
 
-add repository owncloud v10 :
+
+## Add repository owncloud v10 :
+```yaml
 echo 'deb http://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/owncloud.list
+```
 
-===============================================================
 
-Refresh repository :
+## Refresh repository :
+```yaml
 sudo apt-get update
+```
 
-===============================================================
-
-add module php dan owncloud :
+## Add module php dan owncloud :
 - php-bz2
 - php-curl
 - php-gd
@@ -50,30 +55,33 @@ add module php dan owncloud :
 - php-xml
 - php-zip
 
-`sudo apt-get install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-xml php-zip owncloud-files`
+```yaml
+sudo apt-get install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-xml php-zip owncloud-files
+```
 
-===============================================================
 
-Add Document Root Apache :
+## Add Document Root Apache :
 
-(Edit di directory /etc/apache2/site-available/000-default.conf)
+> (Edit di directory /etc/apache2/site-available/000-default.conf)
 
+```yaml
 <VirtualHost *:80>
     . . .
     DocumentRoot /var/www/owncloud
     . . .
 </VirtualHost>
+```
 
-===============================================================
 
-Check syntax apache error atau tidak :
+## Check syntax apache error atau tidak :
+```yaml
 sudo apache2ctl configtest
+```
 
-===============================================================
 
-Reload / restart service apache2 :
-
+## Reload / restart service apache2 :
+```yaml
 sudo systemctl restart apache2 / sudo systemctl reload apache2
+```
 
-===============================================================
 
