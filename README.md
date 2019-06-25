@@ -45,17 +45,18 @@ sudo apt-get update
 ```
 
 ## Add module php dan owncloud :
-- php-bz2
-- php-curl
-- php-gd
-- php-imagick
-- php-intl
-- php-mbstring
-- php-xml
-- php-zip
+- php5.6-bz2
+- php5.6-curl
+- php5.6-gd
+- php5.6-imagick
+- php5.6-intl
+- php5.6-mbstring
+- php5.6-xml
+- php5.6-zip
+- `owncloud-files`
 
 ```yaml
-sudo apt-get install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-xml php-zip owncloud-files
+sudo apt-get install php5.6-bz2 php5.6-curl php5.6-gd php5.6-imagick php5.6-intl php5.6-mbstring php5.6-xml php5.6-zip owncloud-files
 ```
 
 
